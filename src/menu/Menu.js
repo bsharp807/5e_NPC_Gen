@@ -5,7 +5,7 @@ import RandomMenu from './components/RandomMenu';
 
 const Menu = (props) => {
   return(
-    <div>
+    <div id='menu-container'>
       <CreateMenu setReveal= {props.setReveal} />
       <RandomMenu setReveal= {props.setReveal} />
       <CharacterMenu setReveal= {props.setReveal} />

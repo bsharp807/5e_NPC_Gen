@@ -7,3 +7,36 @@ body {
   background-position: right bottom, left top;
   background-attachment: fixed, fixed;
 }
+
+#overall-header{
+  text-align: center;
+  display: block;
+  font-size: 2em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+#menu-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#menu-button{
+  width: 300px;
+  padding: 5px;
+  margin-top: 8px;
+  margin-bottom: 4px;
+  display: inline-block;
+
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: content-box;
+  text-align: center;
+  font-size: 1em;
+
+  cursor: pointer;
+}
