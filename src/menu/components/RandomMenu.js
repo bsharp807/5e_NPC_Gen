@@ -9,7 +9,7 @@ const RandomMenu = (props) => {
   )}
 
   return(
-    <div onClick= {handleClick}>Random Character</div>
+    <div id= 'menu-button' onClick= {handleClick}>Random Character</div>
   )
 }
 

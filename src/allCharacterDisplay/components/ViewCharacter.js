@@ -4,7 +4,7 @@ const ViewCharacter = (props) => {
 
   const handleClick = () => {
     props.viewChar({
-      createCharacterReveal: true,
+      menuReveal: true,
       allCharacterReveal: false,
       characterViewIndex: props.index
     })

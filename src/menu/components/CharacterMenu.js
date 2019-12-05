@@ -9,7 +9,7 @@ const CharacterMenu = (props) => {
   )}
 
   return(
-    <div onClick= {handleClick}>Characters</div>
+    <div id= 'menu-button' onClick= {handleClick}>List</div>
   )
 }
 

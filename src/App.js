@@ -4,6 +4,8 @@ import React from "react";
 import Main from './components/Main';
 import Header from './components/Header';
 
+import './App.css';
+
 const RequestHelper = require('./helpers/request_helper');
 const configFile = require('./config/config');
 

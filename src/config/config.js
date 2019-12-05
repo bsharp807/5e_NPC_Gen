@@ -1,6 +1,6 @@
 const configFile = {
-  char: `http://localhost:3000/npc/`,
-  att: `http://localhost:3000/output/`
+  char: `http://localhost:8234/npc/`,
+  att: `http://localhost:8234/output/`
 }
 
 module.exports = configFile;
