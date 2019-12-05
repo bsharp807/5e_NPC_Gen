@@ -12,7 +12,7 @@ class Main extends Component{
       individualCharacterReveal: false,
       allCharacterReveal: false,
       createCharacterReveal: false,
-      characterViewIndex: null
+      characterViewIndex: 0
     }
 
     this.determineRender = this.determineRender.bind(this)
@@ -25,7 +25,7 @@ class Main extends Component{
 
   determineRender(){
     if(this.state.menuReveal){
-      return <Menu setReveal= {this.setReveal} />
+      return <Menu setReveal= {this.setReveal} characterViewIndex= {this.characterViewIndex}/>
     } else if(this.state.individualCharacterReveal){
       return <CharacterContainer />
     } else if(this.state.allCharacterReveal){
