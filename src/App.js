@@ -1,26 +1,51 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Component } from "react";
+import { connect } from "react-redux"
+import React from "react";
+import Main from './components/Main';
+import Header from './components/Header';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const RequestHelper = require('./helpers/request_helper');
+const configFile = require('./config/config');
 
-export default App;
+class App extends Component {
+  componentDidMount(){
+    this.props.getCharacters();
+    this.props.getAttributes();
+  }
+
+  render() {
+    return (
+          <div className="app">
+            <Header />
+            <Main />
+          </div>
+    );
+  };
+};
+
+const mapDispatchToProps = dispatch => ({
+  getCharacters(){
+    dispatch(() => {
+      RequestHelper.get(configFile.char)
+      .then(characters => {
+        dispatch({
+          type: 'GET_CHARACTERS',
+          characters
+        })
+      })
+    })
+  },
+  getAttributes(){
+    dispatch(() => {
+      RequestHelper.get(configFile.att)
+      .then(attributes => {
+        dispatch({
+          type: 'GET_ATTRIBUTES',
+          attributes
+        })
+      })
+    })
+  }
+})
+
+export default connect(null,mapDispatchToProps)(App);
