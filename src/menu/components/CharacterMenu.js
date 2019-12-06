@@ -1,15 +1,9 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 const CharacterMenu = (props) => {
-  const handleClick = () => {props.setReveal(
-    {
-      menuReveal: false,
-      allCharacterReveal: true
-    }
-  )}
-
   return(
-    <div id= 'menu-button' onClick= {handleClick}>List</div>
+    <Link id= 'menu-button' to='/Characters'>List</Link>
   )
 }
 

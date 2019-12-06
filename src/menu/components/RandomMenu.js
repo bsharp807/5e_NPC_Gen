@@ -1,15 +1,9 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 const RandomMenu = (props) => {
-  const handleClick = () => {props.setReveal(
-    {
-      menuReveal: false,
-      individualCharacterReveal: true
-    }
-  )}
-
   return(
-    <div id= 'menu-button' onClick= {handleClick}>Random Character</div>
+    <div id= 'menu-button' to='/'>Random Character</div>
   )
 }
 

@@ -1,15 +1,9 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 const CreateMenu = (props) => {
-  const handleClick = () => {props.setReveal(
-    {
-      menuReveal: false,
-      createCharacterReveal: true
-    }
-  )}
-
   return(
-    <div id= 'menu-button' onClick= {handleClick}>Create a Character</div>
+    <Link id= 'menu-button' to='/Generate'>Create a Character</Link>
   )
 }
 
