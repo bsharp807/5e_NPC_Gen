@@ -19,7 +19,7 @@ class AllCharacterDisplay extends Component{
 
   render(){
     return(
-      <div>
+      <div id="all-character-container">
         {this.renderCharacters()}
       </div>
     )

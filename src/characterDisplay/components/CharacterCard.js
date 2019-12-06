@@ -5,7 +5,6 @@ import CardRace from './CardRace';
 import CardJob from './CardJob';
 
 const CharacterCard = (props) => {
-  console.log(props.character);
     return(
       <div>
         <CardName firstName= {props.character.first_name} lastName= {props.character.last_name}/>

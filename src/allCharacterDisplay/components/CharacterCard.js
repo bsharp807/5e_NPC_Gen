@@ -7,7 +7,7 @@ import ViewCharacter from './ViewCharacter';
 
 const CharacterCard = (props) => {
   return(
-    <div>
+    <div id="all-character-card">
       <CardName firstName= {props.character.first_name} lastName= {props.character.last_name}/>
       <CardRace race={props.character.race} />
       <CardJob job= {props.character.job} />
