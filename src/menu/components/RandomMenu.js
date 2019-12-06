@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const RandomMenu = (props) => {
   return(
-    <div id= 'menu-button' to='/'>Random Character</div>
+    <div id= 'menu-button'>Random Character</div>
   )
 }
 
