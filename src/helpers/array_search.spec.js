@@ -2,7 +2,7 @@ const arraySearch = require('./array_search.js')
 
 describe('test suite for array search', () => {
   let element;
-  let gorge = {id: 1, firstName: 'gorge'}
+  let gorge = 1
   let array = [];
   let noGorge = []
   let arrayWithGorge = [{id: 1, firstName: 'gorge'}, {id: 2, firstName: 'heslop'}]

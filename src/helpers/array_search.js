@@ -5,13 +5,13 @@ class arraySearch {
 
     if(enquiry && array) {
       const result = array.find((element) => {
-        return element.id === enquiry.id
+        return element.id === enquiry
       })
       if(result) {
         return result
       } else return notFound
     } else return errorMessage
-    
+
   }
 }
 

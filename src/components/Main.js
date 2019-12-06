@@ -12,7 +12,7 @@ class Main extends Component{
       individualCharacterReveal: false,
       allCharacterReveal: false,
       createCharacterReveal: false,
-      characterViewIndex: 0
+      characterViewIndex: "1"
     }
 
     this.determineRender = this.determineRender.bind(this)
