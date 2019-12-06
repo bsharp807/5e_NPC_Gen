@@ -14,7 +14,7 @@ const Menu = (props) => {
         <RandomMenu setReveal= {props.setReveal} />
         <CharacterMenu setReveal= {props.setReveal} />
       </div>
-      <div>
+      <div id='overall-character-container'>
         <CharacterContainer index={props.characterViewIndex ? props.characterViewIndex : 0} />
       </div>
     </React.Fragment>

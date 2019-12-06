@@ -9,7 +9,6 @@ class CharacterDisplay extends Component{
     this.state = {
       character: 'not loaded yet'
     }
-
   }
 
   componentDidMount() {
@@ -30,7 +29,7 @@ class CharacterDisplay extends Component{
   render(){
     if(this.props.characters.length){
       return(
-        <div>
+        <div id='character-card-container'>
           <CharacterCard character={this.state.character}/>
         </div>
       )
