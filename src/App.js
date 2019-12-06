@@ -13,14 +13,15 @@ class App extends Component {
   componentDidMount(){
     this.props.getCharacters();
     this.props.getAttributes();
+    this.props.getSelected();
   }
 
   render() {
     return (
-          <div className="app">
-            <Header />
-            <Main />
-          </div>
+      <div className="app">
+        <Header />
+        <Main />
+      </div>
     );
   };
 };
@@ -33,6 +34,17 @@ const mapDispatchToProps = dispatch => ({
         dispatch({
           type: 'GET_CHARACTERS',
           characters
+        })
+      })
+    })
+  },
+  getSelected(){
+    dispatch(() => {
+      RequestHelper.get(configFile.char)
+      .then(characters => {
+        dispatch({
+          type: 'UPDATE_SELECTED_CHARACTER',
+          character: characters[0]
         })
       })
     })
