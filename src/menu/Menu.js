@@ -3,11 +3,9 @@ import { connect } from 'react-redux';
 import CharacterMenu from './components/CharacterMenu';
 import CreateMenu from './components/CreateMenu';
 import RandomMenu from './components/RandomMenu';
-import CharacterContainer from '../containers/CharacterContainer';
+import CharacterDisplay from '../characterDisplay/CharacterDisplay';
 
 const Menu = (props) => {
-  console.log(props);
-  
   return(
     <React.Fragment>
       <div id='menu-container'>
@@ -16,7 +14,7 @@ const Menu = (props) => {
         <CharacterMenu setReveal= {props.setReveal} />
       </div>
       <div id='overall-character-container'>
-        <CharacterContainer index={props.characterViewIndex ? props.characterViewIndex : 1} />
+        <CharacterDisplay character= {props.selected} />
       </div>
     </React.Fragment>
   )

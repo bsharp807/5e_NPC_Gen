@@ -5,6 +5,7 @@ import CardRace from './CardRace';
 import CardJob from './CardJob';
 
 const CharacterCard = (props) => {
+  if (props.character.first_name) {
     return(
       <div>
         <CardName firstName= {props.character.first_name} lastName= {props.character.last_name}/>
@@ -13,6 +14,7 @@ const CharacterCard = (props) => {
         <CardAge age= {props.character.age} />
       </div>
     )
+  } else return <div>Loading...</div>
 }
 
 export default CharacterCard;
