@@ -78,19 +78,15 @@ body {
   align-items: center;
 }
 
-#all-character-overall-flex{
-  display: flex;
-}
-
 #all-character-container{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 #all-character-card{
-  width: 200px;
+  width: 250px;
   margin: 5px;
   padding: 5px;
   border: 1px solid #ccc;
