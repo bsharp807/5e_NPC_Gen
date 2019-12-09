@@ -22,7 +22,7 @@ const randomNonPlayerCharacterGenerator = (attributes = {}) => {
     birthplace: randomGeneration.randomBirthplace(),
     gender: characterGender
   }
-  console.log('random npc gen:', randomCharacter);
+  return randomCharacter
 }
 
 module.exports = randomNonPlayerCharacterGenerator

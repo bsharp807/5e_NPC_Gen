@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const CharacterMenu = (props) => {
   return(
-    <Link id= 'menu-button' to='/Characters'>List</Link>
+    <Link id= 'menu-button' to='/Characters' onClick={props.handleListClick}>List</Link>
   )
 }
 

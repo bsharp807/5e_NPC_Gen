@@ -12,8 +12,14 @@ const configFile = require('../config/config');
 const Menu = (props) => {
 
   const generateRandomCharacter = () => {
-    randomNonPlayerCharacterGenerator(props.attributes)
-    props.postRandomCharacter()
+    const randomCharacter = randomNonPlayerCharacterGenerator(props.attributes)
+    props.postRandomCharacter(randomCharacter)
+  }
+
+  const handleListClick = () => {
+    console.log('inside handle');
+    
+    props.getListCharacters()
   }
 
   return(
@@ -21,7 +27,7 @@ const Menu = (props) => {
       <div id='menu-container'>
         <CreateMenu />
         <RandomMenu generateRandomCharacter={generateRandomCharacter}/>
-        <CharacterMenu />
+        <CharacterMenu handleListClick={handleListClick}/>
       </div>
       <div id='overall-character-container'>
         <CharacterDisplay character= {props.selected} />
@@ -39,7 +45,16 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  postRandomCharacter(){
+  postRandomCharacter(payload){
+    RequestHelper.post(configFile.char, payload)
+    .then((characters) => {
+      dispatch({
+        type: 'UPDATE_SELECTED_CHARACTER',
+        character: characters[characters.length-1]
+      })
+    })
+  },
+  getListCharacters(){
     RequestHelper.get(configFile.char)
     .then((characters) => {
       dispatch({
