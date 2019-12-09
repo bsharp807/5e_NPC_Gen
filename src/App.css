@@ -68,9 +68,9 @@ body {
 }
 
 #character-card-container{
-  width: 300px;
+  width: 600px;
   margin-top: 5px;
-  padding: 5px 0px 5px 0px;
+  padding: 5px 10px 10px 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
   display: flex;
@@ -131,4 +131,10 @@ body {
   border-radius: 4px;
   margin: 5px;
   padding: 0px 5px 5px 5px;
+}
+
+@media screen and (max-width: 720px) {
+  #character-card-container{
+    width: auto;
+  }
 }

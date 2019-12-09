@@ -13,7 +13,7 @@ const CharacterCard = (props) => {
         <CardRace race={props.character.race} />
         <CardJob job= {props.character.job} />
         <CardAge age= {props.character.age} />
-        <CardDescription />
+        <CardDescription text= {props.text}/>
       </div>
     )
   } else return <div>Loading...</div>
