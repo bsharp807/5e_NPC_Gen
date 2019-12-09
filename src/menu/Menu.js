@@ -9,9 +9,9 @@ const Menu = (props) => {
   return(
     <React.Fragment>
       <div id='menu-container'>
-        <CreateMenu setReveal= {props.setReveal} />
-        <RandomMenu setReveal= {props.setReveal} />
-        <CharacterMenu setReveal= {props.setReveal} />
+        <CreateMenu />
+        <RandomMenu />
+        <CharacterMenu />
       </div>
       <div id='overall-character-container'>
         <CharacterDisplay character= {props.selected} />

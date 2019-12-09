@@ -17,7 +17,7 @@ const mapDispatchToProps = dispatch => ({
       .then(character => {
         dispatch({
           type: 'UPDATE_SELECTED_CHARACTER',
-          character
+          character: character[0]
         })
       })
     })
