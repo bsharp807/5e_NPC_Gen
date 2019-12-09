@@ -5,12 +5,15 @@ import CreateMenu from './components/CreateMenu';
 import RandomMenu from './components/RandomMenu';
 import CharacterDisplay from '../characterDisplay/CharacterDisplay';
 
+const RequestHelper = require('../helpers/request_helper');
+const configFile = require('../config/config');
+
 const Menu = (props) => {
   return(
     <React.Fragment>
       <div id='menu-container'>
         <CreateMenu />
-        <RandomMenu />
+        <RandomMenu postRandomCharacter={props.postRandomCharacter}/>
         <CharacterMenu />
       </div>
       <div id='overall-character-container'>
@@ -27,4 +30,16 @@ const mapStateToProps = (state) => {
   }
 };
 
-export default connect(mapStateToProps)(Menu);
+const mapDispatchToProps = dispatch => ({
+  postRandomCharacter(){
+    RequestHelper.get(configFile.char)
+    .then((characters) => {
+      dispatch({
+        type: 'GET_CHARACTERS',
+        characters
+      })
+    })
+  }
+})
+
+export default connect(mapStateToProps,mapDispatchToProps)(Menu);
