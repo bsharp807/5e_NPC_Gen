@@ -17,8 +17,6 @@ const Menu = (props) => {
   }
 
   const handleListClick = () => {
-    console.log('inside handle');
-    
     props.getListCharacters()
   }
 
