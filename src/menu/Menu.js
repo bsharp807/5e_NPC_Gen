@@ -5,13 +5,14 @@ import CreateMenu from './components/CreateMenu';
 import RandomMenu from './components/RandomMenu';
 import CharacterDisplay from '../characterDisplay/CharacterDisplay';
 
+const randomNonPlayerCharacterGenerator = require('../helpers/random_npc_logic')
 const RequestHelper = require('../helpers/request_helper');
 const configFile = require('../config/config');
 
 const Menu = (props) => {
 
   const generateRandomCharacter = () => {
-    console.log('generating random character...');
+    randomNonPlayerCharacterGenerator(props.attributes)
     props.postRandomCharacter()
   }
 
@@ -32,7 +33,8 @@ const Menu = (props) => {
 const mapStateToProps = (state) => {
   return {
     characters: state.characters,
-    selected: state.selected
+    selected: state.selected,
+    attributes: state.attributes
   }
 };
 
