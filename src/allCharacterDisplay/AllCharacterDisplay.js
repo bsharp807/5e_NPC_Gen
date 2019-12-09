@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import CharacterCard from './components/CharacterCard';
+import { Link } from "react-router-dom";
 
 class AllCharacterDisplay extends Component{
   constructor(props){
@@ -19,9 +20,14 @@ class AllCharacterDisplay extends Component{
 
   render(){
     return(
-      <div id="all-character-container">
-        {this.renderCharacters()}
-      </div>
+      <React.Fragment>
+        <div>
+          <Link id='all-char-back' to= '/'>Back</Link>
+        </div>
+        <div id="all-character-container">
+          {this.renderCharacters()}
+        </div>
+      </React.Fragment>
     )
   }
 }

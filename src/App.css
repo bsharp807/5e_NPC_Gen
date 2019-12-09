@@ -121,3 +121,14 @@ body {
   color: black;
   text-decoration: none;
 }
+
+#all-char-back{
+  color: black;
+  text-decoration: none;
+  position: absolute;
+  top: -35px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: 5px;
+  padding: 0px 5px 5px 5px;
+}
