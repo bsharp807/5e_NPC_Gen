@@ -1,17 +1,15 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 const ViewCharacter = (props) => {
 
   const handleClick = () => {
-    props.viewChar({
-      menuReveal: true,
-      allCharacterReveal: false,
-      characterViewIndex: props.index
-    })
+    console.log('view char clicked');
+    
   }
 
   return(
-    <div onClick= {handleClick}>View Character</div>
+    <Link id="view-character-link" to="/" onClick= {handleClick}>View Character</Link>
   )
 }
 

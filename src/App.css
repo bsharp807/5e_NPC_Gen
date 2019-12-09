@@ -95,3 +95,29 @@ body {
   flex-direction: column;
   align-items: left;
 }
+
+#view-character-link{
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#view-character-link:link{
+  color: black;
+  text-decoration: none;
+}
+
+#view-character-link:visited{
+  color: black;
+  text-decoration: none;
+}
+
+#view-character-link:hover{
+  color: black;
+  text-decoration: none;
+}
+
+#view-character-link:active{
+  color: black;
+  text-decoration: none;
+}

@@ -1,10 +1,27 @@
 import AllCharacterDisplay from '../allCharacterDisplay/AllCharacterDisplay';
 import { connect } from 'react-redux';
 
+const RequestHelper = require('../helpers/request_helper.js')
+const configFile = require('../config/config.js')
+
 const mapStateToProps = (state) => {
   return {
     characters: state.characters
   }
 };
 
-export default connect(mapStateToProps)(AllCharacterDisplay);
+const mapDispatchToProps = dispatch => ({
+  getSelectedCharacter(index){
+    dispatch(() => {
+      RequestHelper.get(`${configFile.char}${index}`)
+      .then(character => {
+        dispatch({
+          type: 'UPDATE_SELECTED_CHARACTER',
+          character
+        })
+      })
+    })
+  }
+})
+
+export default connect(mapStateToProps,mapDispatchToProps)(AllCharacterDisplay);
