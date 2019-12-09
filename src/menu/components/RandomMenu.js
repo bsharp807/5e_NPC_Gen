@@ -11,6 +11,4 @@ const RandomMenu = (props) => {
   )
 }
 
-
-
 export default RandomMenu;
