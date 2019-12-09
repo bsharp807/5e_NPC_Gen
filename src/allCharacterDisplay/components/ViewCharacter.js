@@ -4,8 +4,7 @@ import { Link } from "react-router-dom";
 const ViewCharacter = (props) => {
 
   const handleClick = () => {
-    console.log('view char clicked');
-    
+    props.viewChar(props.index)
   }
 
   return(

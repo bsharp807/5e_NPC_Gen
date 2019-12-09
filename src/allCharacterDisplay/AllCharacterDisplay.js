@@ -13,7 +13,7 @@ class AllCharacterDisplay extends Component{
 
   renderCharacters(){
     return this.props.characters.map((element, index) => {
-      return <CharacterCard character={element} key={index} viewChar= {this.props.viewChar} />
+      return <CharacterCard character={element} key={index} viewChar= {this.props.getSelectedCharacter} />
     })
   }
 
