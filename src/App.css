@@ -78,9 +78,15 @@ body {
   align-items: center;
 }
 
+#all-character-overall-flex{
+  display: flex;
+}
+
 #all-character-container{
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
 #all-character-card{
