@@ -9,11 +9,17 @@ const RequestHelper = require('../helpers/request_helper');
 const configFile = require('../config/config');
 
 const Menu = (props) => {
+
+  const generateRandomCharacter = () => {
+    console.log('generating random character...');
+    props.postRandomCharacter()
+  }
+
   return(
     <React.Fragment>
       <div id='menu-container'>
         <CreateMenu />
-        <RandomMenu postRandomCharacter={props.postRandomCharacter}/>
+        <RandomMenu generateRandomCharacter={generateRandomCharacter}/>
         <CharacterMenu />
       </div>
       <div id='overall-character-container'>

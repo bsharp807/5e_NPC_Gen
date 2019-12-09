@@ -1,13 +1,8 @@
 import React from 'react';
 
 const RandomMenu = (props) => {
-
-  const handleClick = () => {
-    props.postRandomCharacter()
-  }
-
   return(
-    <div id= 'menu-button' onClick={handleClick}>Random Character</div>
+    <div id= 'menu-button' onClick={props.generateRandomCharacter}>Random Character</div>
   )
 }
 
