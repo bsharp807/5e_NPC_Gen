@@ -79,7 +79,9 @@ class CreateCharacterForm extends Component {
           options={this.props.attributes.jobs}
           updateOption={this.handleJob}
         />
-        <RadioEntry text='Gender' />
+        <RadioEntry 
+          options={['Female', 'Male', 'Non-Binary']}
+        />
         <SubmitSection />
       </form>
     )
