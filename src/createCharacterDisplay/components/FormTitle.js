@@ -2,7 +2,7 @@ import React from 'react'
 
 const FormTitle = (props) => {
   return(
-    <div>{props.text}</div>
+    <div id='form-title'>{props.text}</div>
   )
 }
 

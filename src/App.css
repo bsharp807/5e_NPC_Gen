@@ -133,6 +133,40 @@ body {
   padding: 0px 5px 5px 5px;
 }
 
+#create-character-display{
+  text-align: center;
+}
+
+#create-character-form{
+  display: grid;
+  justify-content: center;
+  text-align: left;
+}
+
+#form-title{
+  margin-bottom: 10px;
+  font-size: larger;
+}
+
+#radio-input{
+  display: flex;
+  flex-direction: row;
+}
+
+#radio-button-group{
+  display: flex;
+  flex-direction: row;
+  margin: 5px;
+}
+
+#radio-button{
+  height: 30px;
+  width: 30px;
+  margin-right: 5px;
+  border: 1px solid #ccc;
+  border-radius: 100%;
+}
+
 @media screen and (max-width: 720px) {
   #character-card-container{
     width: auto;

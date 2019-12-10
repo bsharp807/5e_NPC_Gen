@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import FormTitle from './FormTitle'
+
 import NameEntry from './NameEntry'
 import NumberEntry from './NumberEntry'
 import DropDownEntry from './DropDownEntry'
@@ -18,7 +18,6 @@ class CreateCharacterForm extends Component {
   render(){
     return(
       <form autoComplete='off' id="create-character-form">
-        <FormTitle text='NPC Geneneration Form' />
         <NameEntry text='First Name' />
         <NameEntry text='Last Name' />
         <NumberEntry text='Age' />
