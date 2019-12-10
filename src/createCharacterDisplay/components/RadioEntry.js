@@ -6,7 +6,13 @@ const RadioEntry = (props) => {
    <div id="gender-entry">
     <div id='radio-input'>
       {props.options.map((element, index) => {
-       return <RadioButton key={index} text={element} /> 
+       return (<RadioButton 
+        key={index} 
+        text={element} 
+        index={index} 
+        selected={props.selected}
+        handleChange={props.handleChange}
+       />)
       })}
     </div>
    </div>

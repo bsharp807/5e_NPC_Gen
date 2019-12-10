@@ -13,7 +13,9 @@ class CreateCharacterForm extends Component {
       lastName: '',
       age: '',
       race: '',
-      job: ''
+      job: '',
+      gender: 'Female',
+      radioSelected: 0
     }
 
     this.handleFirstName = this.handleFirstName.bind()
@@ -21,6 +23,7 @@ class CreateCharacterForm extends Component {
     this.handleLastName = this.handleLastName.bind()
     this.handleRace = this.handleRace.bind()
     this.handleJob = this.handleJob.bind()
+    this.handleGender = this.handleGender.bind()
   }
 
   handleFirstName = (event) => {
@@ -41,6 +44,10 @@ class CreateCharacterForm extends Component {
 
   handleJob = (job) => {
     this.setState({job})
+  }
+
+  handleGender = (index, gender) => {
+    this.setState({radioSelected: index, gender})
   }
 
   render(){
@@ -81,6 +88,8 @@ class CreateCharacterForm extends Component {
         />
         <RadioEntry 
           options={['Female', 'Male', 'Non-Binary']}
+          selected={this.state.radioSelected}
+          handleChange={this.handleGender}
         />
         <SubmitSection />
       </form>
