@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import FormEntry from './FormEntry'
 import DropDownEntry from './DropDownEntry'
-import GenderEntry from './GenderEntry'
+import RadioEntry from './RadioEntry'
 import SubmitSection from './SubmitSection'
 
 class CreateCharacterForm extends Component {
@@ -79,7 +79,7 @@ class CreateCharacterForm extends Component {
           options={this.props.attributes.jobs}
           updateOption={this.handleJob}
         />
-        <GenderEntry text='Gender' />
+        <RadioEntry text='Gender' />
         <SubmitSection />
       </form>
     )

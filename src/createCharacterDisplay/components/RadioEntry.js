@@ -1,7 +1,7 @@
 import React from 'react'
 import RadioButton from './sub-components/RadioButton'
 
-const GenderEntry = (props) => {
+const RadioEntry = (props) => {
   return(
    <div id="gender-entry">
      <div id='radio-input'>
@@ -12,4 +12,4 @@ const GenderEntry = (props) => {
   )
 }
 
-export default GenderEntry
+export default RadioEntry
