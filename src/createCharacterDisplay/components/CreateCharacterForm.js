@@ -11,12 +11,16 @@ class CreateCharacterForm extends Component {
     this.state = {
       firstName: '',
       lastName: '',
-      age: ''
+      age: '',
+      race: '',
+      job: ''
     }
 
     this.handleFirstName = this.handleFirstName.bind()
     this.handleLastName = this.handleLastName.bind()
     this.handleLastName = this.handleLastName.bind()
+    this.handleRace = this.handleRace.bind()
+    this.handleJob = this.handleJob.bind()
   }
 
   handleFirstName = (event) => {
@@ -29,6 +33,14 @@ class CreateCharacterForm extends Component {
 
   handleAge = (event) => {
     this.setState({age: event.target.value})
+  }
+
+  handleRace = (race) => {
+    this.setState({race})
+  }
+
+  handleJob = (job) => {
+    this.setState({job})
   }
 
   render(){
@@ -55,8 +67,18 @@ class CreateCharacterForm extends Component {
           value={this.state.age} 
           handleChange={this.handleAge} 
         />
-        <DropDownEntry text='Race' options={this.props.attributes.races}/>
-        <DropDownEntry text='Class' options={this.props.attributes.jobs}/>
+        <DropDownEntry 
+          text='Race'
+          selector='race' 
+          options={this.props.attributes.races}
+          updateOption={this.handleRace}
+        />
+        <DropDownEntry 
+          text='Class'
+          selector='job'
+          options={this.props.attributes.jobs}
+          updateOption={this.handleJob}
+        />
         <GenderEntry text='Gender' />
         <SubmitSection />
       </form>
