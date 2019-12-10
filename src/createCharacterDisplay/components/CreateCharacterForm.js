@@ -55,8 +55,8 @@ class CreateCharacterForm extends Component {
           value={this.state.age} 
           handleChange={this.handleAge} 
         />
-        <DropDownEntry text='Race' options={this.props.races}/>
-        <DropDownEntry text='Class' options={this.props.jobs}/>
+        <DropDownEntry text='Race' options={this.props.attributes.races}/>
+        <DropDownEntry text='Class' options={this.props.attributes.jobs}/>
         <GenderEntry text='Gender' />
         <SubmitSection />
       </form>
