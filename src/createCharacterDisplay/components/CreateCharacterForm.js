@@ -11,10 +11,12 @@ class CreateCharacterForm extends Component {
     super(props)
     this.state = {
       firstName: '',
-      lastName: ''
+      lastName: '',
+      age: null
     }
 
     this.handleFirstName = this.handleFirstName.bind()
+    this.handleLastName = this.handleLastName.bind()
     this.handleLastName = this.handleLastName.bind()
   }
 
@@ -26,12 +28,16 @@ class CreateCharacterForm extends Component {
     this.setState({lastName: event.target.value})
   }
 
+  handleAge = (event) => {
+    this.setState({age: event.target.value})
+  }
+
   render(){
     return(
       <form autoComplete='off' id="create-character-form">
         <NameEntry text='First Name' value={this.state.firstName} handleChange={this.handleFirstName} />
         <NameEntry text='Last Name' value={this.state.lastName} handleChange={this.handleLastName} />
-        <NumberEntry text='Age' />
+        <NumberEntry text='Age' value={this.state.age} handleChange={this.handleAge} />
         <DropDownEntry text='Race' />
         <DropDownEntry text='Class' />
         <GenderEntry text='Gender' />
