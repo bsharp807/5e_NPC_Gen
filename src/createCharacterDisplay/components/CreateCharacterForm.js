@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 
-import NameEntry from './NameEntry'
-import NumberEntry from './NumberEntry'
+import FormEntry from './FormEntry'
 import DropDownEntry from './DropDownEntry'
 import GenderEntry from './GenderEntry'
 import SubmitSection from './SubmitSection'
@@ -35,11 +34,29 @@ class CreateCharacterForm extends Component {
   render(){
     return(
       <form autoComplete='off' id="create-character-form">
-        <NameEntry text='First Name' value={this.state.firstName} handleChange={this.handleFirstName} />
-        <NameEntry text='Last Name' value={this.state.lastName} handleChange={this.handleLastName} />
-        <NumberEntry text='Age' value={this.state.age} handleChange={this.handleAge} />
-        <DropDownEntry text='Race' />
-        <DropDownEntry text='Class' />
+        <FormEntry 
+          type='text'
+          heading='name'
+          text='First Name' 
+          value={this.state.firstName} 
+          handleChange={this.handleFirstName} 
+        />
+        <FormEntry 
+          type='text'
+          heading='name'
+          text='Last Name' 
+          value={this.state.lastName} 
+          handleChange={this.handleLastName} 
+        />
+        <FormEntry 
+          type='number' 
+          heading='number'
+          text='Age' 
+          value={this.state.age} 
+          handleChange={this.handleAge} 
+        />
+        <DropDownEntry text='Race' options={this.props.races}/>
+        <DropDownEntry text='Class' options={this.props.jobs}/>
         <GenderEntry text='Gender' />
         <SubmitSection />
       </form>
