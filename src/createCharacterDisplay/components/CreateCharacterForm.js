@@ -12,7 +12,7 @@ class CreateCharacterForm extends Component {
     this.state = {
       firstName: '',
       lastName: '',
-      age: null
+      age: ''
     }
 
     this.handleFirstName = this.handleFirstName.bind()
