@@ -6,7 +6,10 @@ const CreateCharacterDisplay = (props) => {
     return(
       <div id='create-character-display'>
         <FormTitle text='NPC Geneneration Form' />
-        <CreateCharacterForm attributes={props.attributes}/>
+        <CreateCharacterForm 
+          attributes={props.attributes} 
+          postCreatedCharacter={props.postCreatedCharacter}
+        />
       </div>
     )
 }

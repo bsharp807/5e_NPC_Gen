@@ -8,11 +8,11 @@ const SubmitSection = (props) => {
 
   const handleSubmit = () => {
     setReveal(!reveal)
+    props.handleUpdate()
   }
 
   const handleConfirm = () => {
-    console.log('confirmed');
-    
+    props.handleConfirm();
   }
 
   return(
