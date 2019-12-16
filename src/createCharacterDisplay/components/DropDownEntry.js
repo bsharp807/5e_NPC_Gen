@@ -14,6 +14,7 @@ const DropDownEntry = (props) => {
   const renderOptions = () => {
     return props.options.map((element, index) => {
       return <div
+        id='form-dropdown-item'
         key={index} 
         onClick={() => optionSelect(element[props.selector])}>{element[props.selector]}
       </div>
@@ -22,7 +23,7 @@ const DropDownEntry = (props) => {
 
   if(props.options){
     return(
-      <div>
+      <div id='form-dropdown'>
         <div onClick={() => setReveal(!reveal)}>{value ? value : props.text}</div>
         {reveal ? renderOptions() : null}
       </div>
