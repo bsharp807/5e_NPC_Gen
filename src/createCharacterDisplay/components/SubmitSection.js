@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import FormButton from './sub-components/FormButton'
-import Cancel from './sub-components/Cancel'
+import LinkButton from './sub-components/LinkButton'
 
 const SubmitSection = (props) => {
 
@@ -22,12 +22,12 @@ const SubmitSection = (props) => {
       ? 
       <div>
         <FormButton handleClick={handleSubmit} text='Submit' /> 
-        <Cancel /> 
+        <LinkButton text="Cancel"/> 
       </div> 
       :
       <div>
         <div>Submit Character?</div>
-        <FormButton handleClick={handleConfirm} text='Yes' />
+        <LinkButton handleClick={handleConfirm} text='Yes' />
         <FormButton handleClick={handleSubmit} text='No' />
       </div>
       }
