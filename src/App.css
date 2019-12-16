@@ -145,8 +145,8 @@ body {
   text-align: left;
   border: 3px solid #ccc;
   border-radius: 4px;
-  width: 400px;
-  padding: 3px 5px;
+  width: 450px;
+  padding: 3px 0px 3px 25px;
 }
 
 #form-title{
@@ -171,6 +171,7 @@ body {
   margin-right: 5px;
   border: 1px solid #ccc;
   border-radius: 100%;
+  cursor: pointer;
 }
 
 #name-entry-input, #number-entry-input{
@@ -193,18 +194,73 @@ body {
   margin-top: 8px;
   margin-bottom: 4px;
   display: inline-block;
-
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: content-box;
   text-align: center;
   font-size: 1em;
-
   cursor: pointer;
+}
+
+#random-button{
+  height: 30px;
+  color: white;
+  background-color: #2A74B1;
+  padding: 5px;
+  margin: 8px 5px 4px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: content-box;
+  font-size: 1em;
+  text-align: center;
+  font-family: "Exo 2", verdana, sans-serif;
+  cursor: pointer;
+}
+
+#generate-form-section{
+  display: flex;
+  flex-flow: wrap-reverse;
 }
 
 @media screen and (max-width: 720px) {
   #character-card-container{
     width: auto;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  #create-character-form{
+    width: 378px;
+  }
+
+  #generate-form-section{
+    flex-flow: wrap;
+  }
+}
+
+@media screen and (max-width: 413px) {
+  #create-character-form{
+    width: auto;
+    padding-left: 13px
+  }
+
+  #generate-form-section{
+    flex-flow: wrap;
+  }
+}
+
+@media screen and (max-width: 321px) {
+  #create-character-form{
+    width: auto;
+    padding-left: 40px;
+  }
+
+  #generate-form-section{
+    flex-flow: wrap;
+  }
+
+  #name-entry-input, #number-entry-input, #menu-button, #form-dropdown{
+    width: 200px;
   }
 }

@@ -21,14 +21,14 @@ const SubmitSection = (props) => {
       !reveal 
       ? 
       <div>
-        <FormButton handleClick={handleSubmit} text='Submit' /> 
-        <LinkButton text="Cancel"/> 
+        <FormButton id='menu-button' handleClick={handleSubmit} text='Submit' /> 
+        <LinkButton id='menu-button' text="Cancel"/> 
       </div> 
       :
       <div>
         <div>Submit Character?</div>
-        <LinkButton handleClick={handleConfirm} text='Yes' />
-        <FormButton handleClick={handleSubmit} text='No' />
+        <LinkButton id='menu-button' handleClick={handleConfirm} text='Yes' />
+        <FormButton id='menu-button' handleClick={handleSubmit} text='No' />
       </div>
       }
     </div>

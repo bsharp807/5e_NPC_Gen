@@ -4,6 +4,7 @@ import FormEntry from './FormEntry'
 import DropDownEntry from './DropDownEntry'
 import RadioEntry from './RadioEntry'
 import SubmitSection from './SubmitSection'
+import FormButton from './sub-components/FormButton'
 
 const randomNonPlayerCharacterGenerator = require('../../helpers/random_npc_logic')
 const formRandomElements = require('../../helpers/partial_npc_logic')
@@ -100,39 +101,74 @@ class CreateCharacterForm extends Component {
   render(){
     return(
       <form autoComplete='off' id="create-character-form">
-        <FormEntry 
-          type='text'
-          heading='name'
-          text='First Name' 
-          value={this.state.first_name} 
-          handleChange={this.handleFirstName} 
-        />
-        <FormEntry 
-          type='text'
-          heading='name'
-          text='Last Name' 
-          value={this.state.last_name} 
-          handleChange={this.handleLastName} 
-        />
-        <FormEntry 
-          type='number' 
-          heading='number'
-          text='Age' 
-          value={this.state.age} 
-          handleChange={this.handleAge} 
-        />
-        <DropDownEntry 
-          text='Race'
-          selector='race' 
-          options={this.props.attributes.races}
-          updateOption={this.handleRace}
-        />
-        <DropDownEntry 
-          text='Class'
-          selector='job'
-          options={this.props.attributes.jobs}
-          updateOption={this.handleJob}
-        />
+        <div id='generate-form-section'>
+          <FormEntry 
+            type='text'
+            heading='name'
+            text='First Name' 
+            value={this.state.first_name} 
+            handleChange={this.handleFirstName} 
+          />
+          <FormButton 
+            id='random-button' 
+            handleClick={() => console.log('form button clicked')} 
+            text='Random'
+          />
+        </div>
+        <div id='generate-form-section'>
+          <FormEntry 
+            type='text'
+            heading='name'
+            text='Last Name' 
+            value={this.state.last_name} 
+            handleChange={this.handleLastName} 
+          />
+          <FormButton 
+            id='random-button' 
+            handleClick={() => console.log('form button clicked')} 
+            text='Random'
+          />
+        </div>
+        <div id='generate-form-section'>
+          <FormEntry 
+            type='number' 
+            heading='number'
+            text='Age' 
+            value={this.state.age} 
+            handleChange={this.handleAge} 
+          />
+          <FormButton 
+            id='random-button' 
+            handleClick={() => console.log('form button clicked')} 
+            text='Random'
+          />          
+        </div>
+        <div id='generate-form-section'>
+          <DropDownEntry 
+            text='Race'
+            selector='race' 
+            options={this.props.attributes.races}
+            updateOption={this.handleRace}
+          />
+          <FormButton 
+            id='random-button' 
+            handleClick={() => console.log('form button clicked')} 
+            text='Random'
+          />            
+        </div>
+        <div id='generate-form-section'>
+          <DropDownEntry 
+            text='Class'
+            selector='job'
+            options={this.props.attributes.jobs}
+            updateOption={this.handleJob}
+          />
+          <FormButton 
+            id='random-button' 
+            handleClick={() => console.log('form button clicked')} 
+            text='Random'
+          />            
+        </div>
         <RadioEntry 
           options={['Female', 'Male']}
           selected={this.state.radioSelected}
